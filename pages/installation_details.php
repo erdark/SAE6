@@ -116,7 +116,7 @@ function checkPerturbations($perturbations) {
                             $endHour = new DateTime($restaurant->end);
                             $formattedHourEnd = $endHour->format('H\hi');
                             echo "<li>Horaires : $formattedHourStart - $formattedHourEnd</li>";
-                            echo "<li>Capacités d'accueil maximum : $restaurant->seats personnes</li>";
+                            echo "<li>Capacité d'accueil maximum : $restaurant->seats personnes</li>";
                             echo "<li>Perturbations : ";
                                 if (count($restaurant->perturbations) != 0) {
                                     echo "<ul>";
