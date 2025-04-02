@@ -50,7 +50,7 @@ function checkPerturbations($perturbations) {
 <div class="top">
     <?php
         echo "<h1>Liste des $typeFormatted</h1>";
-        echo "<a class='add_btn' href='/pages/add_installation.php?type=$typeFormatted'><img src='../images/add_btn.svg'></a>";
+        echo "<a class='add_btn' href='../pages/add_installation.php?type=$typeFormatted'><img src='../images/add_btn.svg'></a>";
     ?>
         
 </div>
