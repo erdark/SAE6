@@ -29,7 +29,7 @@ switch ($type) {
         ];
         break;
 
-    case 'remontee':
+    case 'remontée':
         // Formulaire pour "remontée"
         $formFields = [
             'name' => 'Nom',
@@ -37,7 +37,7 @@ switch ($type) {
             'end' => 'Horaire de fin',
             'open' => 'Ouverture',
             'debit' => 'Débit',
-            'type' => 'Type'
+            'type_remontee' => 'Type'
         ];
         break;
 
@@ -63,6 +63,9 @@ switch ($type) {
 <?php if (!empty($formFields)): ?>
     <form action="ajouter.php" method="POST">
         <h3>Ajouter un(e) <?= ucfirst($type) ?></h3>
+
+         <!-- Champ caché pour transmettre le type -->
+         <input type="hidden" name="type" value="<?= $type ?>">
 
         <?php foreach ($formFields as $name => $label): ?>
             <?php if ($name == 'start' || $name == 'end'): ?>

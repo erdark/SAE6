@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-session_destroy();
 
 // Initialisation du tableau en session si non défini
 
