@@ -1,5 +1,6 @@
-<footer>
+<div class="footer">
     <p>&copy; <?php echo date("Y"); ?> - Skiff</p>
-</footer>
+</div>
+
 </body>
 </html>
