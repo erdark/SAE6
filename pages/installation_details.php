@@ -178,7 +178,7 @@ function checkPerturbations($perturbations) {
 
                     echo "<div id='bottom_div_id_$remontee->id' style='display: none;'>";
                         echo "<ul>";
-                            echo "<li>Debit : " . $remontee->debit . " personnes/min</li>";
+                            echo "<li>Debit : " . $remontee->debit . " personne/min</li>";
                             $startHour = new DateTime($remontee->start);
                             $formattedHourStart = $startHour->format('H\hi');
                             $endHour = new DateTime($remontee->end);
