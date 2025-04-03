@@ -8,7 +8,6 @@
 require_once '../session.php';
 include '../includes/header.php';
 
-
 echo '<button onclick="test()">Devenir admin</button>';
 
 echo "<h1>Fréquentation des installations de ...(nom de la station)</h1>";
@@ -58,4 +57,6 @@ if (!empty($_SESSION['data'])) {
 }
 
 include '../includes/footer.php';
+var_dump($_SESSION)
 ?>
+<a href="http://localhost:8000/pages/add_perturbation.php?id=1">Ajouter une perturbation</a>
