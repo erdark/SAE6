@@ -19,5 +19,7 @@
             <a href="../pages/installation_details.php?type=Restaurants">Restaurants</a>
             <a href="../pages/installation_details.php?type=Parkings">Parkings</a>
             <a href="../pages/installation_details.php?type=Remontées">Remontées</a>
+            <a href="../pages/map.php">Carte</a>
+            <a href="../pages/activities.php">Activités</a>
         </div>
     </nav>
