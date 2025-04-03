@@ -21,6 +21,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $item->color = $_POST['color'];
             }
 
+            if($type === 'restaurants'){
+                $item->min_price = $_POST['min_price'];
+                $item->max_price = $_POST['max_price'];
+                $item->description = $_POST['description'];
+                $item->seats = $_POST['seats'];
+            }
+
+            if($type === 'remontees'){
+                $item->debit = $_POST['debit'];
+                $item->type_remontee = $_POST['type_remontee'];
+            }
+
+            if($type === 'parkings'){
+                $item->slots = $_POST['slots'];
+                $item->price = $_POST['price'];
+            }
+
+            if (isset($_POST['perturbations'])) {
+                $item->perturbations = []; // Réinitialisation des perturbations
+
+                foreach ($_POST['perturbations'] as $perturbationData) {
+                    $perturbation = new stdClass();
+                    $perturbation->start = $perturbationData['start'];
+                    $perturbation->end = $perturbationData['end'];
+                    $perturbation->description = $perturbationData['description'];
+
+                    $item->perturbations[] = $perturbation;
+                }
+            }
+
             break;
         }
     }

@@ -75,27 +75,61 @@ if (!$element) {
 
     <?php elseif ($type === 'restaurants'): ?>
         <label for="min_price">Prix minimum :</label>
-        <input type="text" id="end" name="end" value="<?= $element->min_price ?>" required><br><br>
+        <input type="text" id="min_price" name="min_price" value="<?= $element->min_price ?>" required><br><br>
         
         <label for="max_price">Prix maximum :</label>
-        <input type="text" id="end" name="end" value="<?= $element->max_price ?>" required><br><br>
+        <input type="text" id="max_price" name="max_price" value="<?= $element->max_price ?>" required><br><br>
 
         <label for="description">Description :</label>
-        <input type="text" id="end" name="end" value="<?= $element->description ?>" required><br><br>
+        <input type="text" id="description" name="description" value="<?= $element->description ?>" required><br><br>
 
         <label for="seats">Nombre de places:</label>
-        <input type="text" id="end" name="end" value="<?= $element->seats?>" required><br><br>
+        <input type="text" id="seats" name="seats" value="<?= $element->seats?>" required><br><br>
+
+        <?php if (!empty($element->perturbations)) : ?>
+    <h3>Modifier les Perturbations :</h3>
+    <?php foreach ($element->perturbations as $index => $perturbation) : ?>
+        <fieldset>
+            <legend>Perturbation <?= $index + 1 ?></legend>
+            
+            <label for="perturbation_start_<?= $index ?>">Début :</label>
+            <input type="datetime-local" id="perturbation_start_<?= $index ?>" name="perturbations[<?= $index ?>][start]" 
+                   value="<?= date('Y-m-d\TH:i', strtotime($perturbation->start)) ?>"><br><br>
+
+            <label for="perturbation_end_<?= $index ?>">Fin :</label>
+            <input type="datetime-local" id="perturbation_end_<?= $index ?>" name="perturbations[<?= $index ?>][end]" 
+                   value="<?= date('Y-m-d\TH:i', strtotime($perturbation->end)) ?>"><br><br>
+
+            <label for="perturbation_description_<?= $index ?>">Description :</label>
+            <input type="text" id="perturbation_description_<?= $index ?>" name="perturbations[<?= $index ?>][description]" 
+                   value="<?= htmlspecialchars($perturbation->description) ?>"><br><br>
+
+            <!-- Bouton de suppression -->
+            <button type="button" onclick="supprimerPerturbation(<?= $index ?>)">🗑️ Supprimer</button>
+        </fieldset>
+    <?php endforeach; ?>
+<?php else : ?>
+    <p>Aucune perturbation enregistrée.</p>
+<?php endif; ?>
+
 
 
     <?php elseif  ($type === 'remontees'): ?>
         <label for="debit">Débit:</label>
-        <input type="text" id="end" name="end" value="<?= $element->debit?>" required><br><br>
+        <input type="text" id="debit" name="debit" value="<?= $element->debit?>" required><br><br>
 
         <label for="type_remontee">Type:</label>
         <select id="type_remontee" name="type_remontee">
             <option value="vert" <?= $element->type_remontee == 'tire-fesse' ? 'selected' : '' ?>>Tire-Fesse</option>
             <option value="bleu" <?= $element->type_remontee == 'telesiege' ? 'selected' : '' ?>>Télésiège</option>
         </select><br><br>
+    <?php elseif  ($type === 'parkings'): ?>
+        <label for="slots">Nombre de place:</label>
+        <input type="text" id="slots" name="slots" value="<?= $element->slots?>" required><br><br>
+
+        <label for="price">Prix:</label>
+        <input type="text" id="price" name="price" value="<?= $element->price?>" required><br><br>
+
     <?php endif; ?>
     <input type="submit" value="Mettre à jour">
 </form>
