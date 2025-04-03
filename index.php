@@ -8,12 +8,8 @@
 <body>
     <?php
 
-        if (isset($_GET['page'])) {
-
-            if ($_GET['page'] == 'add') {
-                require_once("pages/add_perturbation.php");
-            }
-        }
+        header("Location: pages/home.php");
+        exit;
 
     ?>
 </body>
