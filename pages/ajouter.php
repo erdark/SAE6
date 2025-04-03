@@ -80,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     switch ($type) {
         case 'pistes':
             $data->color = $_POST['color'];
+            $data->pertubations = new stdClass();
             break;
 
         case 'restaurants':
@@ -87,16 +88,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data->max_price = $_POST['max_price'];
             $data->description = $_POST['description'];
             $data->seats = $_POST['seats'];
+            $data->pertubations = new stdClass();
             break;
 
-        case 'remontées':
+        case 'remontees':
             $data->debit = $_POST['debit'];
-            $data->type = $_POST['remontee_type'];
+            $data->type_remontee = $_POST['type_remontee'];
+            $data->perturbations = new stdClass();
             
             break;
 
         case 'parkings':
             $data->slots = $_POST['slots'];
+            $data->price = $_POST['price'];
+            $data->pertubations = new stdClass();
             break;
     }
 

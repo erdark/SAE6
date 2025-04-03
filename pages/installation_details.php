@@ -44,7 +44,9 @@ function checkPerturbations($perturbations) {
     return false;
     
 }
-
+echo "<PRE>";
+print_r($_SESSION["data"]->remontees);
+echo "</PRE>";
 ?>
 
 <div class="top">

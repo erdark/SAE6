@@ -51,7 +51,8 @@ switch ($typeFormatted) {
             'start' => 'Horaire de début',
             'end' => 'Horaire de fin',
             'open' => 'Ouverture',
-            'slots' => 'Nombre de place'
+            'slots' => 'Nombre de place',
+            'price' => 'Prix'
         ];
         $type = "parking";
         break;
@@ -92,6 +93,14 @@ switch ($typeFormatted) {
                     <option value="bleu">Bleu</option>
                     <option value="rouge">Rouge</option>
                     <option value="noir">Noir</option>
+                </select>
+                <br><br> 
+            <?php elseif ($name == 'type_remontee'): ?>
+                <!-- Liste déroulante pour Couleur -->
+                <label for="<?= $name ?>"><?= $label ?>:</label>
+                <select id="<?= $name ?>" name="<?= $name ?>" required>
+                    <option value="tire-fesse">Tire-Fesse</option>
+                    <option value="telesiege">Télésiège</option>
                 </select>
                 <br><br>
             <?php else: ?>
