@@ -10,7 +10,9 @@
 <body>
     <nav>
         <div class="nav-logo">
-            <img src="../images/logo.png" width="50" height="50" alt="Logo de Skiff">
+            <a href="./home.php">
+                <img src="../images/logo.png" width="50" height="50" alt="Logo de Skiff">
+            </a>
         </div>
         <div class="nav-buttons">
             <a href="../pages/installation_details.php?type=Pistes">Pistes</a>
