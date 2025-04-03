@@ -1,7 +1,3 @@
-<?php
-error_reporting(E_ALL);
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
