@@ -30,14 +30,8 @@ if(!isset($installation_concernee)){
     }
 }
 
-var_dump($installation_concernee);
-echo "<br/><br/>";
-
 array_push($installation_concernee->perturbations, (object) array('start' => $_POST['start'], 'end' => $_POST['end'], 'description' => $_POST['description']));
 
-var_dump($installation_concernee);
-echo "<br/><br/>";
-var_dump($_SESSION);
-// header("Location: home.php");
-// exit;
+header("Location: home.php");
+exit;
 ?>

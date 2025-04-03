@@ -16,6 +16,4 @@
 
 <?php
     require_once '../session.php';
-    var_dump($_SESSION);
-
 ?>
