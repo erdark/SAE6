@@ -64,7 +64,7 @@ include '../includes/header.php';
         </article>
 
         <article class="card">
-            <a href="./page_activite.php">
+            <a href="./activites.php">
             <img
             src="../images/activites.png"
             alt="Pictogramme d'activites" />
