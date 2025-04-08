@@ -14,7 +14,7 @@ switch ($typeFormatted) {
     case "Parkings":
         $type = "parkings";
         break;
-    case "Remontées":
+    case "remontees":
         $type = "remontees";
         break;
 }   

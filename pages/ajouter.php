@@ -107,6 +107,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Appeler la fonction pour ajouter les données dans la session
     ajouterDonnees($type, $data);
+
+    
+
+    // Redirection après ajout
+    header("Location: installation_details.php?type=$type");
+    exit;
 }
 
 

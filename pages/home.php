@@ -42,7 +42,7 @@ include '../includes/header.php';
         </article>
 
         <article class="card">
-            <a href="./installation_details.php?type=Remontées">
+            <a href="./installation_details.php?type=remontees">
                 <img
                 src="../images/remontee.png"
                 alt="Pictogramme d'une remontée mécanique" />

@@ -31,7 +31,7 @@ switch ($typeFormatted) {
         $type = "restaurant";
         break;
 
-    case 'Remontées':
+    case 'remontees':
         // Formulaire pour "remontée"
         $formFields = [
             'name' => 'Nom',
