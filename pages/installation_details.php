@@ -5,7 +5,7 @@ include '../includes/header.php';
 $typeFormatted = htmlspecialchars($_GET["type"]);
 
 switch ($typeFormatted) {
-    case "Pistes":
+    case "pistes":
         $type = "pistes";
         break;
     case "Restaurants":

@@ -9,7 +9,7 @@ include '../includes/header.php';
 <div class="container">
     <div class="cards">
         <article class="card">
-            <a href="./installation_details.php?type=Pistes">
+            <a href="./installation_details.php?type=pistes">
                 <img
                 src="../images/piste.png"
                 alt="Pictogramme d'une piste" />
