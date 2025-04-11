@@ -27,7 +27,25 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    
 }
+
+.coming_soon {
+    margin: auto;
+    width: 50%;
+    height: 50em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ajoute de l'espace entre les éléments */
+    align-items: center;
+    
+}
+
+.coming_soon img {
+    height: 11em;
+}
+
 
 .main_div {
     padding-bottom: 1.5em;

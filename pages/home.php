@@ -64,16 +64,16 @@ include '../includes/header.php';
         </article>
 
         <article class="card">
-            <a href="./activites.php">
-            <img
-            src="../images/activites.png"
-            alt="Pictogramme d'activites" />
-            <div class="content">
-                <p>Activités</p>
-            </div>
+            <a href="./activities.php">
+                <img
+                src="../images/activities.png"
+                alt="Pictogramme d'activités" />
+                <div class="content">
+                    <p>Activités</p>
+                </div>
+            </a>
         </article>
         
-
     </div>
 </div>
 
