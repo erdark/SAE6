@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $item->max_price = $_POST['max_price'];
                 $item->description = $_POST['description'];
                 $item->seats = $_POST['seats'];
+                $item->rating = $_POST['rating'];
             }
 
             if($type === 'remontees'){
@@ -56,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Redirection après mise à jour
-    header("Location: update_installation.php?type=$type&id=$id&success=1");
+    header("Location: installation_details.php?type=$type");
     exit;
 }
 ?>

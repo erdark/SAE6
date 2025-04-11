@@ -18,8 +18,6 @@ function normalizeType($type) {
 
 $type = normalizeType($type);
 
-print_r($type);
-
 // Vérifier si les données sont disponibles en session
 if (!isset($_SESSION['data']) || !isset($_SESSION['data']->$type)) {
     die("Les données ne sont pas disponibles en session.");
@@ -85,6 +83,10 @@ if (!$element) {
 
         <label for="seats">Nombre de places:</label>
         <input type="text" id="seats" name="seats" value="<?= $element->seats?>" required><br><br>
+
+        
+        <label for="rating">Note:</label>
+        <input type="text" id="rating" name="rating" value="<?= $element->rating?>" required><br><br>
 
         <?php if (!empty($element->perturbations)) : ?>
     <h3>Modifier les Perturbations :</h3>
