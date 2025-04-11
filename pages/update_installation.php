@@ -122,8 +122,8 @@ if (!$element) {
 
         <label for="type_remontee">Type:</label>
         <select id="type_remontee" name="type_remontee">
-            <option value="vert" <?= $element->type_remontee == 'tire-fesse' ? 'selected' : '' ?>>Tire-Fesse</option>
-            <option value="bleu" <?= $element->type_remontee == 'telesiege' ? 'selected' : '' ?>>Télésiège</option>
+            <option value="tire-fesse" <?= $element->type_remontee == 'tire-fesse' ? 'selected' : '' ?>>Tire-Fesse</option>
+            <option value="telesiege" <?= $element->type_remontee == 'telesiege' ? 'selected' : '' ?>>Télésiège</option>
         </select><br><br>
     <?php elseif  ($type === 'parkings'): ?>
         <label for="slots">Nombre de place:</label>
