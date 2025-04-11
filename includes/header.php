@@ -15,9 +15,9 @@
             </a>
         </div>
         <div class="nav-buttons">
-            <a href="../pages/installation_details.php?type=Pistes">Pistes</a>
-            <a href="../pages/installation_details.php?type=Restaurants">Restaurants</a>
-            <a href="../pages/installation_details.php?type=Parkings">Parkings</a>
-            <a href="../pages/installation_details.php?type=Remontées">Remontées</a>
+            <a href="../pages/installation_details.php?type=pistes">Pistes</a>
+            <a href="../pages/installation_details.php?type=restaurants">Restaurants</a>
+            <a href="../pages/installation_details.php?type=parkings">Parkings</a>
+            <a href="../pages/installation_details.php?type=remontees">Remontées</a>
         </div>
     </nav>
