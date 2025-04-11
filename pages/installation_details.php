@@ -8,10 +8,10 @@ switch ($typeFormatted) {
     case "pistes":
         $type = "pistes";
         break;
-    case "Restaurants":
+    case "restaurants":
         $type = "restaurants";
         break;
-    case "Parkings":
+    case "parkings":
         $type = "parkings";
         break;
     case "remontees":

@@ -4,7 +4,7 @@ $typeFormatted = isset($_GET['type']) ? $_GET['type'] : '';
 
 // Définition du formulaire en fonction du type
 switch ($typeFormatted) {
-    case 'Pistes':
+    case 'pistes':
         // Formulaire pour "piste"
         $formFields = [
             'name' => 'Nom',
@@ -16,7 +16,7 @@ switch ($typeFormatted) {
         $type = "piste";
         break;
 
-    case 'Restaurants':
+    case 'restaurants':
         // Formulaire pour "restaurant"
         $formFields = [
             'name' => 'Nom',
@@ -26,7 +26,8 @@ switch ($typeFormatted) {
             'min_price' => 'Prix minimum',
             'max_price' => 'Prix maximum',
             'description' => 'Description',
-            'seats' => 'Nombre de places'
+            'seats' => 'Nombre de places',
+            'rating' => 'Note'
         ];
         $type = "restaurant";
         break;
@@ -44,7 +45,7 @@ switch ($typeFormatted) {
         $type = "remontée";
         break;
 
-    case 'Parkings':
+    case 'parkings':
         // Formulaire pour "parking"
         $formFields = [
             'name' => 'Nom',

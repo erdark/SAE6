@@ -75,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data->start = $_POST['start'];
     $data->end = $_POST['end'];
     $data->open = isset($_POST['open']) ? $_POST['open'] == 'true' : 0;
+    $data->perturbations = [];
 
     // Ajout des champs spécifiques selon le type
     switch ($type) {
@@ -88,6 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data->max_price = $_POST['max_price'];
             $data->description = $_POST['description'];
             $data->seats = $_POST['seats'];
+            $data->rating = $_POST['rating'];
             $data->pertubations = new stdClass();
             break;
 

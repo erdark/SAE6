@@ -20,7 +20,7 @@ include '../includes/header.php';
         </article>
 
         <article class="card">
-            <a href="./installation_details.php?type=Restaurants">
+            <a href="./installation_details.php?type=restaurants">
                 <img
                 src="../images/repas.png"
                 alt="Pictogramme d'un repas" />
@@ -31,7 +31,7 @@ include '../includes/header.php';
         </article>
 
         <article class="card">
-            <a href="./installation_details.php?type=Parkings">
+            <a href="./installation_details.php?type=parkings">
                 <img
                 src="../images/parking.png"
                 alt="Pictogramme d'un parking" />
