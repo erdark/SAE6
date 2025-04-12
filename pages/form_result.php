@@ -32,6 +32,7 @@ if(!isset($installation_concernee)){
 
 array_push($installation_concernee->perturbations, (object) array('start' => $_POST['start'], 'end' => $_POST['end'], 'description' => $_POST['description']));
 
-header("Location: home.php");
+
+header("Location: installation_details.php?type=" . $_GET['type']);
 exit;
 ?>

@@ -63,7 +63,7 @@ function checkPerturbations($perturbations) {
                 echo "<div class='main_div'>";
 
                     echo "<div id='head_div_id_$piste->id' onClick='toggleDiv(bottom_div_id_$piste->id)'>";
-                        echo "Intitulé : $piste->name | Niveau : $piste->color | Status : " . ($piste->open ? "Ouvert" : "Fermé") . (checkPerturbations($piste->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=pistes&id=$piste->id'>Edit</a>" : "");
+                        echo "Intitulé : $piste->name | Niveau : $piste->color | Status : " . ($piste->open ? "Ouvert" : "Fermé") . (checkPerturbations($piste->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=pistes&id=$piste->id'>Edit</a>" . "&nbsp;<a href='../pages/add_perturbation.php?type=pistes&id=$piste->id'>Diffuser une pertubations</a>" : "");
                     echo "</div>";
 
                     echo "<div id='bottom_div_id_$piste->id' style='display: none;'>";

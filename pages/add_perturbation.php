@@ -1,4 +1,4 @@
-<form action=<?php echo "form_result.php?id=" . $_GET['id']?> method="post">
+<form action=<?php echo "form_result.php?type=" . $_GET['type'] . "&id=" . $_GET['id']?> method="post">
     <label>
         Description
         <input name ="description" type="text">
