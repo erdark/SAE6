@@ -104,7 +104,7 @@ function checkPerturbations($perturbations) {
                 echo "<div class='main_div'>";
 
                     echo "<div id='head_div_id_$restaurant->id' onClick='toggleDiv(bottom_div_id_$restaurant->id)'>";
-                        echo "Intitulé : $restaurant->name | Note : $restaurant->rating/5 | Status : " . ($restaurant->open ? "Ouvert" : "Fermé") . (checkPerturbations($restaurant->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=restaurants&id=$restaurant->id'>Edit</a>" : "");
+                        echo "Intitulé : $restaurant->name | Note : $restaurant->rating/5 | Status : " . ($restaurant->open ? "Ouvert" : "Fermé") . (checkPerturbations($restaurant->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=restaurants&id=$restaurant->id'>Edit</a>" . "&nbsp;<a href='../pages/add_perturbation.php?type=restaurants&id=$restaurant->id'>Diffuser une pertubations</a>" : "");
                     echo "</div>";
 
                     echo "<div id='bottom_div_id_$restaurant->id' style='display: none;'>";
@@ -147,7 +147,7 @@ function checkPerturbations($perturbations) {
                 echo "<div class='main_div'>";
 
                     echo "<div id='head_div_id_$parking->id' onClick='toggleDiv(bottom_div_id_$parking->id)'>";
-                        echo "Intitulé : $parking->name | Prix : " . $parking->price . "€ | Nombre de places : $parking->slots | Status : " . ($parking->open ? "Ouvert" : "Fermé") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=parkings&id=$parking->id'>Edit</a>" : "");
+                        echo "Intitulé : $parking->name | Prix : " . $parking->price . "€ | Nombre de places : $parking->slots | Status : " . ($parking->open ? "Ouvert" : "Fermé") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=parkings&id=$parking->id'>Edit</a>" . "&nbsp;<a href='../pages/add_perturbation.php?type=parkings&id=$parking->id'>Diffuser une pertubations</a>" : "");
                     echo "</div>";
 
                     echo "<div id='bottom_div_id_$parking->id' style='display: none;'>";
@@ -173,7 +173,7 @@ function checkPerturbations($perturbations) {
                 echo "<div class='main_div'>";
 
                     echo "<div id='head_div_id_$remontee->id' onClick='toggleDiv(bottom_div_id_$remontee->id)'>";
-                        echo "Intitulé : $remontee->name | Type : $remontee->type_remontee | Status : " . ($remontee->open ? "Ouvert" : "Fermé") . (checkPerturbations($remontee->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=remontees&id=$remontee->id'>Edit</a>" : "");
+                        echo "Intitulé : $remontee->name | Type : $remontee->type_remontee | Status : " . ($remontee->open ? "Ouvert" : "Fermé") . (checkPerturbations($remontee->perturbations) ? "&nbsp; <img src='../images/warning.png' width='20'>" : "") . ($_SESSION["isAdmin"] ? "&nbsp;<a href='../pages/update_installation.php?type=remontees&id=$remontee->id'>Edit</a>" . "&nbsp;<a href='../pages/add_perturbation.php?type=remontees&id=$remontee->id'>Diffuser une pertubations</a>" : "");
                     echo "</div>";
 
                     echo "<div id='bottom_div_id_$remontee->id' style='display: none;'>";
