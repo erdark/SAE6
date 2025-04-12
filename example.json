@@ -89,7 +89,10 @@
             "end": "18:00:00",
             "open": true,
             "slots": 600,
-            "price": 2
+            "price": 2,
+            "perturbations": [
+                
+            ]
         },
 
         {
@@ -99,7 +102,10 @@
             "end": "15:00:00",
             "open": false,
             "slots": 50,
-            "price": 2
+            "price": 2,
+            "perturbations": [
+                
+            ]
         }
     ],
 
