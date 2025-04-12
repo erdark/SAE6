@@ -8,14 +8,15 @@
             "start": "10:00:00",
             "end": "18:00:00",
             "open": true,
-            "perturbations":[ 
+            "perturbations": [
                 {
-                    "start": "12-11-2024T12:30:00Z",
+                    "start": "12-11-2025T13:30:00Z",
+                    "end": "12-11-2025T15:30:00Z",
                     "description": "Avalanches"
                 },
                 {
-                    "start": "25-02-2025T12:30:00Z",
-                    "end": "25-02-2025T13:30:00Z",
+                    "start": "02-04-2025T12:30:00Z",
+                    "end": "02-04-2025T17:00:00Z",
                     "description": "Fermeture prévue"
                 }
             ]
@@ -28,7 +29,9 @@
             "start": "14:00:00",
             "end": "15:00:00",
             "open": true,
-            "perturbations": []
+            "perturbations": [
+                
+            ]
         }
     ],
 
@@ -40,12 +43,14 @@
             "start": "10:00:00",
             "end": "18:00:00",
             "open": true,
+            "rating" : 4.8,
             "min_price": 10,
             "max_price": 20,
             "description": "JF vous attends avec de délicieux plats maisons",
             "seats": 50,
-            "rating": 4.8,
-            "perturbations": []
+            "perturbations": [
+                
+            ]
         },
 
         {
@@ -54,12 +59,18 @@
             "start": "14:00:00",
             "end": "15:00:00",
             "open": false,
+            "rating" : 2.1,
             "min_price": 30,
             "max_price": 50,
             "description": "Restaurant haut de gamme pour skieurs affamés",
             "seats": 50,
-            "rating": 3.6,
-            "perturbations": [
+            "perturbations": 
+            [
+                {
+                    "start": "12-04-2025T12:30:00Z",
+                    "end": "12-05-2025T12:30:00Z",
+                    "description": "Vacances"
+                },
                 {
                     "start": "12-04-2025T12:30:00Z",
                     "end": "12-05-2025T12:30:00Z",
@@ -78,19 +89,17 @@
             "end": "18:00:00",
             "open": true,
             "slots": 600,
-            "price": 2,
-            "perturbations": []
+            "price": 2
         },
 
         {
             "id": "6",
-            "name": "petit parking",
+            "name": "Petit parking",
             "start": "14:00:00",
             "end": "15:00:00",
             "open": false,
             "slots": 50,
-            "price": 2,
-            "perturbations": []
+            "price": 2
         }
     ],
 
@@ -103,8 +112,11 @@
             "end": "18:00:00",
             "open": true,
             "debit": 2.5,
-            "type_remontee": "tire-fesse",
-            "perturbations": []
+            "type_remontee": "Tire-fesse",
+            "perturbations": 
+            [
+                
+            ]
         },
 
         {
@@ -114,8 +126,9 @@
             "end": "15:00:00",
             "open": true,
             "debit": 4,
-            "type_remontee": "télé-siège",
-            "perturbations": [
+            "type_remontee": "Télé-siège",
+            "perturbations": 
+            [
                 {
                     "start": "14-06-2025T09:00:00Z",
                     "end": "31-06-2025T18:00:00Z",
