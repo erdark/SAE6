@@ -1,4 +1,6 @@
 <?php
+include '../includes/header.php';
+
 // Vérification de l'existence du paramètre 'type' dans l'URL
 $typeFormatted = isset($_GET['type']) ? $_GET['type'] : '';
 
@@ -67,52 +69,56 @@ switch ($typeFormatted) {
 
 <!-- Affichage du formulaire selon le type sélectionné -->
 <?php if (!empty($formFields)): ?>
-    <form action="ajouter.php" method="POST">
-        <h3>Ajouter un(e) <?= ucfirst($type) ?></h3>
+    <div class="update-container">
+        <form class="update-form" action="ajouter.php" method="POST">
+            <h2>Ajouter un(e) <?= ucfirst($type) ?></h2>
 
-         <!-- Champ caché pour transmettre le type -->
-         <input type="hidden" name="type" value="<?= $type ?>">
+            <!-- Champ caché pour transmettre le type -->
+            <input type="hidden" name="type" value="<?= $type ?>">
 
-        <?php foreach ($formFields as $name => $label): ?>
-            <?php if ($name == 'start' || $name == 'end'): ?>
-                <!-- Champs de type "time" pour l'heure -->
-                <label for="<?= $name ?>"><?= $label ?>:</label>
-                <input type="time" id="<?= $name ?>" name="<?= $name ?>" required><br><br>
-            <?php elseif ($name == 'open'): ?>
-                <!-- Champ toggle pour l'Ouverture -->
-                <label for="<?= $name ?>"><?= $label ?>:</label>
-                <label class="switch">
-                    <input type="checkbox" id="<?= $name ?>" name="<?= $name ?>" value="true">
-                    <span class="slider round"></span>
-                </label>
-                <br><br>
-            <?php elseif ($name == 'color'): ?>
-                <!-- Liste déroulante pour Couleur -->
-                <label for="<?= $name ?>"><?= $label ?>:</label>
-                <select id="<?= $name ?>" name="<?= $name ?>" required>
-                    <option value="vert">Vert</option>
-                    <option value="bleu">Bleu</option>
-                    <option value="rouge">Rouge</option>
-                    <option value="noir">Noir</option>
-                </select>
-                <br><br> 
-            <?php elseif ($name == 'type_remontee'): ?>
-                <!-- Liste déroulante pour Couleur -->
-                <label for="<?= $name ?>"><?= $label ?>:</label>
-                <select id="<?= $name ?>" name="<?= $name ?>" required>
-                    <option value="tire-fesse">Tire-Fesse</option>
-                    <option value="telesiege">Télésiège</option>
-                </select>
-                <br><br>
-            <?php else: ?>
-                <!-- Autres champs texte classiques -->
-                <label for="<?= $name ?>"><?= $label ?>:</label>
-                <input type="text" id="<?= $name ?>" name="<?= $name ?>" required><br><br>
-            <?php endif; ?>
-        <?php endforeach; ?>
+            <?php foreach ($formFields as $name => $label): ?>
+                <?php if ($name == 'start' || $name == 'end'): ?>
+                    <!-- Champs de type "time" pour l'heure -->
+                    <label for="<?= $name ?>"><?= $label ?>:</label>
+                    <input type="time" id="<?= $name ?>" name="<?= $name ?>" required>
+                <?php elseif ($name == 'open'): ?>
+                    <!-- Champ toggle pour l'Ouverture -->
 
-        <input type="submit" value="Ajouter">
-    </form>
+                <?php elseif ($name == 'color'): ?>
+                    <!-- Liste déroulante pour Couleur -->
+                    <label for="<?= $name ?>"><?= $label ?>:</label>
+                    <select id="<?= $name ?>" name="<?= $name ?>" required>
+                        <option value="vert">Vert</option>
+                        <option value="bleu">Bleu</option>
+                        <option value="rouge">Rouge</option>
+                        <option value="noir">Noir</option>
+                    </select>
+
+                <?php elseif ($name == 'type_remontee'): ?>
+                    <!-- Liste déroulante pour Couleur -->
+                    <label for="<?= $name ?>"><?= $label ?>:</label>
+                    <select id="<?= $name ?>" name="<?= $name ?>" required>
+                        <option value="tire-fesse">Tire-Fesse</option>
+                        <option value="telesiege">Télésiège</option>
+                    </select>
+
+                <?php else: ?>
+                    <!-- Autres champs texte classiques -->
+                    <label for="<?= $name ?>"><?= $label ?>:</label>
+                    <input type="text" id="<?= $name ?>" name="<?= $name ?>" required>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <span>
+                <label for="<?= $name ?>"><?= $label ?>:</label>
+                <input type="checkbox" id="<?= $name ?>" name="<?= $name ?>" value="true">
+            </span>
+            <input class="btn" type="submit" value="Ajouter">
+        </form>
+    </div>
 <?php else: ?>
     <p>Aucun type sélectionné.</p>
 <?php endif; ?>
+<?php
+include '../includes/footer.php';
+?>
