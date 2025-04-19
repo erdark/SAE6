@@ -39,17 +39,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $item->price = $_POST['price'];
             }
 
-            if (isset($_POST['perturbations'])) {
-                $item->perturbations = []; // Réinitialisation des perturbations
+            // 🧹 Mise à jour des perturbations (filtrage des suppressions)
+            if (isset($_POST['perturbations']) && is_array($_POST['perturbations'])) {
+                $perturbations = [];
 
-                foreach ($_POST['perturbations'] as $perturbationData) {
-                    $perturbation = new stdClass();
-                    $perturbation->start = $perturbationData['start'];
-                    $perturbation->end = $perturbationData['end'];
-                    $perturbation->description = $perturbationData['description'];
-
-                    $item->perturbations[] = $perturbation;
+                foreach ($_POST['perturbations'] as $p) {
+                    if (!isset($p['delete'])) {
+                        $perturbations[] = (object)[
+                            'start' => $p['start'],
+                            'end' => $p['end'],
+                            'description' => $p['description']
+                        ];
+                    }
                 }
+
+                $item->perturbations = $perturbations;
             }
 
             break;

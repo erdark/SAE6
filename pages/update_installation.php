@@ -91,7 +91,29 @@ if (!$element) {
             <label for="rating">Note:</label>
             <input type="text" id="rating" name="rating" value="<?= $element->rating ?>" required>
 
-            <?php if (!empty($element->perturbations)) : ?>
+           
+
+
+
+        <?php elseif ($type === 'remontees'): ?>
+            <label for="debit">Débit:</label>
+            <input type="text" id="debit" name="debit" value="<?= $element->debit ?>" required>
+
+            <label for="type_remontee">Type:</label>
+            <select id="type_remontee" name="type_remontee">
+                <option value="tire-fesse" <?= $element->type_remontee == 'tire-fesse' ? 'selected' : '' ?>>Tire-Fesse</option>
+                <option value="telesiege" <?= $element->type_remontee == 'telesiege' ? 'selected' : '' ?>>Télésiège</option>
+            </select>
+        <?php elseif ($type === 'parkings'): ?>
+            <label for="slots">Nombre de place:</label>
+            <input type="text" id="slots" name="slots" value="<?= $element->slots ?>" required>
+
+            <label for="price">Prix:</label>
+            <input type="text" id="price" name="price" value="<?= $element->price ?>" required>
+
+        <?php endif; ?>
+
+        <?php if (!empty($element->perturbations)) : ?>
                 <h3>Modifier les Perturbations :</h3>
                 <?php foreach ($element->perturbations as $index => $perturbation) : ?>
                     <fieldset>
@@ -115,37 +137,36 @@ if (!$element) {
                 <?php endforeach; ?>
             <?php else : ?>
                 <p>Aucune perturbation enregistrée.</p>
-            <?php endif; ?>
-
-
-
-        <?php elseif ($type === 'remontees'): ?>
-            <label for="debit">Débit:</label>
-            <input type="text" id="debit" name="debit" value="<?= $element->debit ?>" required>
-
-            <label for="type_remontee">Type:</label>
-            <select id="type_remontee" name="type_remontee">
-                <option value="tire-fesse" <?= $element->type_remontee == 'tire-fesse' ? 'selected' : '' ?>>Tire-Fesse</option>
-                <option value="telesiege" <?= $element->type_remontee == 'telesiege' ? 'selected' : '' ?>>Télésiège</option>
-            </select>
-        <?php elseif ($type === 'parkings'): ?>
-            <label for="slots">Nombre de place:</label>
-            <input type="text" id="slots" name="slots" value="<?= $element->slots ?>" required>
-
-            <label for="price">Prix:</label>
-            <input type="text" id="price" name="price" value="<?= $element->price ?>" required>
-
         <?php endif; ?>
         <span>
             <label for="open">Ouvert:</label>
             <input type="checkbox" id="open" name="open" <?= $element->open ? 'checked' : '' ?>>
         </span>
         <input class="btn" type="submit" value="Mettre à jour">
+
+        
     </form>
 </div>
 <?php
 include '../includes/footer.php';
 ?>
+<script>
+document.querySelectorAll('button[type="button"]').forEach(button => {
+    button.addEventListener('click', function () {
+        const fieldset = this.closest('fieldset');
+        if (fieldset) {
+            // Ajouter un champ caché pour signaler la suppression de cette perturbation
+            const index = fieldset.querySelector('input').name.match(/\d+/)[0];
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = `perturbations[${index}][delete]`;
+            hiddenInput.value = '1';
+            fieldset.style.display = 'none'; // cacher l'élément visuellement
+            fieldset.appendChild(hiddenInput); // garder l'information pour le serveur
+        }
+    });
+});
+</script>
 
 </body>
 
