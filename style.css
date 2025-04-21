@@ -295,3 +295,9 @@ a[href*='add_perturbation']:hover {
     outline: none;
     box-shadow: 0 0 0 3px rgba(26, 70, 129, 0.4);
 }
+
+.plus{
+    background-color: #1A4681;
+    padding: 0.2em;
+    border-radius: 10px;
+}
