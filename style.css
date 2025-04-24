@@ -25,9 +25,9 @@ header {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100%; */
     background-color: #333;
     color: white;
     text-align: center;
@@ -37,6 +37,12 @@ header {
 .logo {
     width: 5vw;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 10vw;
+    }
 }
 
 nav {
@@ -70,6 +76,9 @@ h1 {
 .container {
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 80.8vh;
 }
 
 .coming_soon {
