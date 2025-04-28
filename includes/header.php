@@ -21,6 +21,14 @@
                     <img class="logo" src="../images/logo.png" width="50" height="50" alt="Logo de Skiff">
                 </a>
             </div>
+
+            <!-- Bouton burger -->
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="nav-buttons">
                 <a href="../pages/installation_details.php?type=pistes">Pistes</a>
                 <a href="../pages/installation_details.php?type=restaurants">Restaurants</a>
@@ -31,3 +39,13 @@
             </div>
         </nav>
     </header>
+
+    <script>
+        const btn = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-buttons');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+    </script>
