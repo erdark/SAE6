@@ -4,7 +4,16 @@ include '../includes/header.php';
 
 ?>
 
-<h1>Installations de (nom de la station)</h1>
+<?php
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+$isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $userAgent);
+?>
+
+<?php if ($isMobile): ?>
+    <h2>Installations de (nom de la station)</h2>
+<?php else: ?>
+    <h1>Installations de (nom de la station)</h1>
+<?php endif; ?>
 
 <div class="container">
     <div class="cards">
@@ -77,7 +86,4 @@ include '../includes/header.php';
     </div>
 </div>
 
-<?php
-include '../includes/footer.php';
-
-?>
+<?php include '../includes/footer.php';?>

@@ -4,13 +4,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-content {
@@ -24,9 +26,8 @@ header {
     text-align: center;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
+footer {
+    margin-top: auto;
     width: 100%;
     background-color: #333;
     color: white;
@@ -37,6 +38,12 @@ header {
 .logo {
     width: 5vw;
     height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 20vw;
+    }
 }
 
 nav {
@@ -110,22 +117,41 @@ h1 {
 }
 
 .cards {
-    max-width: 63em;
-    height: 45em;
+    max-width: 100vw;
+    width: 85vw;
+    /* height: 60vh; */
     margin: 1em auto;
-    display: grid;
-    grid-template-columns: repeat(3, 20em);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    align-content: flex-start;
 }
 
 .card {
     border: 1px solid #999;
     border-radius: 50px;
-    height: 20em;
+    width: 18vw;
+    height: 24vw;
     display: grid;
     grid-template-rows: max-content 25em 1fr;
     text-align: center;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 36vw;
+        height: 42vw;
+    }
+
+    .card img {
+        width: 27vw;
+        height: auto;
+        max-height: 27vw;
+        object-fit: contain;
+    }
 }
 
 .card img {
@@ -296,7 +322,7 @@ a[href*='add_perturbation']:hover {
     box-shadow: 0 0 0 3px rgba(26, 70, 129, 0.4);
 }
 
-.plus{
+.plus {
     background-color: #1A4681;
     padding: 0.2em;
     border-radius: 10px;

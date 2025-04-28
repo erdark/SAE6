@@ -56,6 +56,4 @@ if (!empty($_SESSION['data'])) {
 } else {
     echo "<p>Aucun élément enregistré.</p>";
 }
-
-include '../includes/footer.php';
 ?>
