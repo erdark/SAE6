@@ -77,6 +77,9 @@ h1 {
 .container {
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 80.8vh;
 }
 
 .coming_soon {
