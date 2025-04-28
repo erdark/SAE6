@@ -10,7 +10,7 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $userAgent);
 ?>
 
 <?php if ($isMobile): ?>
-    <h2>Installations de (nom de la station)</h2>
+    <h2 style="text-align: center;">Installations de (nom de la station)</h2>
 <?php else: ?>
     <h1>Installations de (nom de la station)</h1>
 <?php endif; ?>

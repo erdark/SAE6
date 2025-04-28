@@ -12,7 +12,13 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;  
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        min-height: 0vh;
+    }
 }
 
 .main-content {
@@ -79,7 +85,6 @@ h1 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    min-height: 80.8vh;
 }
 
 .coming_soon {
@@ -106,6 +111,13 @@ h1 {
     max-width: 60em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .main_div {
+        margin: 1em;
+    }
+    
 }
 
 .main_div:hover {
@@ -144,9 +156,21 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+    .cards {
+        width: 90vw;
+        height: auto;
+        margin: 1em auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+    }
+
     .card {
-        width: 36vw;
-        height: 40vw;
+        width: 30vw;
+        height: 30vw;
+        margin: 2vw;
     }
 
     .card img {
